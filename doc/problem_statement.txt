@@ -1,0 +1,24 @@
+The switch to be verified is a 4 port switch which has the following capabilities:
+
+1. Ability to stall the producer port (input interface)
+2. Ability to read back contents programmed in the memory interface.
+3. Ability to send data in at a different clock frequency.
+4. Ability to output data to a slower consumer clock.
+5. Ability for the consumer to stall the switch.
+6. Update the port names.
+
+The verification environment consists of the basic VMM framework consisting of driver, receiver, scoreboard, interfaces,
+mailboxes, environment and test components. 
+
+Stimulus Generation Plan:
+o Packet DA: Generate packet DA with the configured address.
+o Payload length: generate payload length ranging from 2 to 255.
+o Correct or Incorrect Length field.
+o Generate good and bad FCS.
+
+Coverage Plan:
+o Cover all the port address configurations.
+o Cover all the packet lengths.
+o Cover all correct and incorrect length fields.
+o Cover good and bad FCS.
+o Cover all the above combinations.
